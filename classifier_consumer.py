@@ -12,7 +12,8 @@ processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base
 model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
 
 # OpenAI API setup for GPT-4 Turbo
-openai.api_key = json.loads(open("keys.json"))['openai']
+keys = json.load(open("keys.json"))
+openai.api_key = keys['openai']
 
 # Function to generate cohesive caption with GPT-4 Turbo using chat completions
 def generate_cohesive_caption(captions):
