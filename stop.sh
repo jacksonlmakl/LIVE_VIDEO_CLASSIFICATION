@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo ~/kafka_2.13-3.6.1/bin/zookeeper-server-stop.sh ~/kafka_2.13-3.6.1/config/zookeeper.properties & sudo ~/kafka_2.13-3.6.1/bin/kafka-server-stop.sh ~/kafka_2.13-3.6.1/config/server.properties
